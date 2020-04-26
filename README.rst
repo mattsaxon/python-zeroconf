@@ -134,6 +134,22 @@ See examples directory for more.
 Changelog
 =========
 
+0.26.0
+------
+
+* Fixed a regression where service update listener wasn't called on IP address change (it's called
+  on SRV/A/AAAA record changes now), thanks to Matt Saxon
+
+Technically backwards incompatible:
+
+* Service update hook is no longer called on service addition (service added hook is still called),
+  this is related to the fix above
+
+0.25.1
+------
+
+* Eliminated 5s hangup when calling Zeroconf.close(), thanks to Erik Montnemery
+
 0.25.0
 ------
 
